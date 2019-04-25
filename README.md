@@ -1,5 +1,5 @@
 ## Problem Statement
-Demonstrates nested packages within a namespace will fail to unit test
+Demonstrates packages within a namespace will fail to unit test
 because the namespace ``namespace`` is provided as the argument module name to ``unittest.loader.TestLoader._get_directory_containing_module``
 "module_name" parameter, which results in unittest assuming ``namespace`` is a module, and not a package, thus
 the repository root directory's parent directory is set to ``self._top_level_dir`` in ``discover`` on line 337.
